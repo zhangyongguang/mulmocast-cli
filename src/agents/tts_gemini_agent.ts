@@ -15,6 +15,24 @@ import { pcmToMp3 } from "../utils/ffmpeg_utils.js";
 
 import type { GoogleTTSAgentParams, AgentBufferResult, AgentTextInputs, AgentErrorResult } from "../types/agent.js";
 
+// Round-robin key rotation for multiple Gemini API keys
+const geminiKeyPool = (() => {
+  const keysStr = process.env.GEMINI_API_KEYS;
+  const keys = keysStr ? keysStr.split(",").map((k) => k.trim()).filter(Boolean) : [];
+  let index = 0;
+  return {
+    next(): string | undefined {
+      if (keys.length === 0) return undefined;
+      const key = keys[index % keys.length];
+      index++;
+      return key;
+    },
+    size(): number {
+      return keys.length;
+    },
+  };
+})();
+
 const getPrompt = (text: string, instructions?: string) => {
   // https://ai.google.dev/gemini-api/docs/speech-generation?hl=ja#controllable
   if (instructions) {
@@ -31,9 +49,9 @@ export const ttsGeminiAgent: AgentFunction<GoogleTTSAgentParams, AgentBufferResu
   const { text } = namedInputs;
   const { model, voice, suppressError, instructions } = params;
 
-  const apiKey = config?.apiKey;
+  const apiKey = geminiKeyPool.next() ?? config?.apiKey;
   if (!apiKey) {
-    throw new Error("Google GenAI API key is required (GEMINI_API_KEY)", {
+    throw new Error("Google GenAI API key is required (GEMINI_API_KEY or GEMINI_API_KEYS)", {
       cause: apiKeyMissingError("ttsGeminiAgent", audioAction, "GEMINI_API_KEY"),
     });
   }

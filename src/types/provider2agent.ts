@@ -44,6 +44,12 @@ export const provider2TTSAgent = {
     defaultModel: "mock-model",
     models: ["mock-model"],
   },
+  volcengine: {
+    agentName: "ttsVolcengineAgent",
+    hasLimitedConcurrency: false,
+    defaultVoice: "zh_male_shaonianzixin_moon_bigtts",
+    keyName: "VOLCENGINE_API_KEY",
+  },
 };
 
 export const gptImages = ["gpt-image-1.5", "gpt-image-1", "gpt-image-1-mini"];

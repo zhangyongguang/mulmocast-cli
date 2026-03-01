@@ -1,0 +1,13 @@
+{
+    "speechParams": {
+        "provider": "volcengine"
+    },
+    "imageParams": {
+        "provider": "google"
+    },
+    "override": {
+        "imageParams": {
+            "provider": "google"
+        }
+    }
+}

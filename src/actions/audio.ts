@@ -11,6 +11,7 @@ import {
   ttsGeminiAgent,
   ttsElevenlabsAgent,
   ttsKotodamaAgent,
+  ttsVolcengineAgent,
   addBGMAgent,
   combineAudioFilesAgent,
   mediaMockAgent,
@@ -265,7 +266,7 @@ const getConcurrency = (context: MulmoStudioContext) => {
     const provider = text2SpeechProviderSchema.parse(speaker.provider) as keyof typeof provider2TTSAgent;
     return provider2TTSAgent[provider].hasLimitedConcurrency;
   });
-  return hasLimitedConcurrencyProvider ? 1 : 8;
+  return hasLimitedConcurrencyProvider ? 1 : 5;
 };
 
 const audioAgents = {
@@ -276,6 +277,7 @@ const audioAgents = {
   ttsGeminiAgent,
   ttsKotodamaAgent,
   ttsElevenlabsAgent,
+  ttsVolcengineAgent,
   mediaMockAgent,
   addBGMAgent,
   combineAudioFilesAgent,
