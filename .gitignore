@@ -5,3 +5,7 @@ node_modules
 *~
 lib/
 output/
+# Volcengine TTS test files
+test_volcengine.ts
+test_volcengine_auth.ts
+script-baiyin-zhCN.json
