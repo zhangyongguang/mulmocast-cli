@@ -1,7 +1,7 @@
 export const slideStyles = {
   slide_corporate: {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     canvasSize: {
@@ -35,7 +35,7 @@ export const slideStyles = {
   },
   slide_creative: {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     canvasSize: {
@@ -69,7 +69,7 @@ export const slideStyles = {
   },
   slide_dark: {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     canvasSize: {
@@ -103,7 +103,7 @@ export const slideStyles = {
   },
   slide_minimal: {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     canvasSize: {
@@ -137,7 +137,7 @@ export const slideStyles = {
   },
   slide_pop: {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     canvasSize: {
@@ -171,7 +171,7 @@ export const slideStyles = {
   },
   slide_warm: {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     canvasSize: {

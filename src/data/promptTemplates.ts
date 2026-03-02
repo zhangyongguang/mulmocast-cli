@@ -4,7 +4,7 @@ export const promptTemplates = [
     filename: "akira_comic",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -60,7 +60,7 @@ export const promptTemplates = [
     filename: "ani",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -132,7 +132,7 @@ export const promptTemplates = [
     filename: "characters",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -180,7 +180,7 @@ export const promptTemplates = [
     filename: "children_book",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -235,7 +235,7 @@ export const promptTemplates = [
     filename: "comic_strips",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -283,7 +283,7 @@ export const promptTemplates = [
     filename: "documentary",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -330,7 +330,7 @@ export const promptTemplates = [
     filename: "drslump_comic",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -386,7 +386,7 @@ export const promptTemplates = [
     filename: "ghibli_comic",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -442,7 +442,7 @@ export const promptTemplates = [
     filename: "ghibli_comic_strips",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -501,7 +501,7 @@ export const promptTemplates = [
     filename: "ghost_comic",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -564,7 +564,7 @@ export const promptTemplates = [
     filename: "html",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -612,7 +612,7 @@ export const promptTemplates = [
     filename: "image_prompt",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -660,7 +660,7 @@ export const promptTemplates = [
     filename: "leda",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -711,7 +711,7 @@ export const promptTemplates = [
     filename: "onepiece_comic",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -767,7 +767,7 @@ export const promptTemplates = [
     filename: "portrait_movie",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -823,7 +823,7 @@ export const promptTemplates = [
     filename: "realistic_movie",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -879,7 +879,7 @@ export const promptTemplates = [
     filename: "sensei_and_taro",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {
@@ -987,7 +987,7 @@ export const promptTemplates = [
     filename: "sifi_story",
     presentationStyle: {
       $mulmocast: {
-        credit: "closing",
+
         version: "1.1",
       },
       audioParams: {

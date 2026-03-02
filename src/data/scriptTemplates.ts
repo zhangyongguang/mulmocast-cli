@@ -1,7 +1,7 @@
 export const scriptTemplates = [
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -212,7 +212,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -322,7 +322,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -478,7 +478,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -521,7 +521,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -691,7 +691,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -720,7 +720,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -799,7 +799,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -850,7 +850,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -901,7 +901,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -1030,7 +1030,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -1204,7 +1204,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [
@@ -1230,7 +1230,7 @@ export const scriptTemplates = [
   },
   {
     $mulmocast: {
-      credit: "closing",
+
       version: "1.1",
     },
     beats: [

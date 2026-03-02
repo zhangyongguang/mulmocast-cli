@@ -5,9 +5,27 @@
     "imageParams": {
         "provider": "google"
     },
+    "audioParams": {
+        "bgmVolume": 0
+    },
     "override": {
         "imageParams": {
             "provider": "google"
+        },
+        "speechParams": {
+            "provider": "volcengine",
+            "speakers": {
+                "Presenter": {
+                    "provider": "volcengine",
+                    "voiceId": "zh_male_shenyeboke_moon_bigtts",
+                    "speechOptions": {
+                        "speed": 1.2
+                    }
+                }
+            }
+        },
+        "audioParams": {
+            "bgmVolume": 0
         }
     }
 }
