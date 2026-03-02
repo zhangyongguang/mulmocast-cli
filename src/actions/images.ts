@@ -28,6 +28,7 @@ import { agentIncorrectAPIKeyError, agentAPIRateLimitError, imageAction, imageFi
 import { getOutputStudioFilePath, mkdir } from "../utils/file.js";
 import { fileCacheAgentFilter } from "../utils/filters.js";
 import { settings2GraphAIConfig } from "../utils/utils.js";
+import { KeyRotator } from "../utils/key_rotator.js";
 import { audioCheckerError } from "../utils/error_cause.js";
 import { extractImageFromMovie, ffmpegGetMediaDuration, trimMusic } from "../utils/ffmpeg_utils.js";
 
@@ -438,6 +439,29 @@ export const images_graph_data: GraphData = {
 };
 
 export const graphOption = async (context: MulmoStudioContext, settings?: Record<string, string>) => {
+  const config = settings2GraphAIConfig(settings, process.env);
+
+  // Install round-robin key rotation for agents that use GEMINI_API_KEY
+  const geminiApiKeys = process.env.GEMINI_API_KEYS;
+  if (geminiApiKeys) {
+    const rotator = new KeyRotator(geminiApiKeys);
+    const keyNames = rotator.getEntries().map((e) => e.name).join(", ");
+    GraphAILogger.info(`Key rotation enabled: ${rotator.size} Gemini API keys loaded [${keyNames}]`);
+
+    // All agent names that use GEMINI_API_KEY
+    const geminiAgentNames = ["imageGenAIAgent", "ttsGeminiAgent", "ttsGoogleAgent", "movieGenAIAgent"];
+    for (const agentName of geminiAgentNames) {
+      if (!config[agentName]) {
+        config[agentName] = {};
+      }
+      Object.defineProperty(config[agentName], "apiKey", {
+        get: () => rotator.getNext(),
+        enumerable: true,
+        configurable: true,
+      });
+    }
+  }
+
   const options: GraphOptions = {
     agentFilters: [
       {
@@ -447,7 +471,7 @@ export const graphOption = async (context: MulmoStudioContext, settings?: Record
       },
     ],
     taskManager: new TaskManager(MulmoPresentationStyleMethods.getConcurrency(context.presentationStyle)),
-    config: settings2GraphAIConfig(settings, process.env),
+    config,
   };
 
   return options;

@@ -57,8 +57,8 @@ export const gptImages = ["gpt-image-1.5", "gpt-image-1", "gpt-image-1-mini"];
 export const provider2ImageAgent = {
   openai: {
     agentName: "imageOpenaiAgent",
-    defaultModel: "gpt-image-1",
-    models: ["dall-e-3", ...gptImages],
+    defaultModel: "gemini-3.1-flash-image",
+    models: ["gemini-3.1-flash-image", "dall-e-3", ...gptImages],
     keyName: "OPENAI_API_KEY",
     baseURLKeyName: "OPENAI_BASE_URL",
   },

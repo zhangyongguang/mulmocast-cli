@@ -1,0 +1,71 @@
+{
+  "$mulmocast": { "version": "1.1" },
+  "title": "仙境海岸 鲜美烟台",
+  "description": "烟台城市30秒宣传片",
+  "lang": "zh",
+  "canvasSize": { "width": 1024, "height": 1536 },
+  "speechParams": {
+    "speakers": {
+      "Presenter": {
+        "provider": "volcengine",
+        "voiceId": "zh_male_shaonianzixin_moon_bigtts",
+        "displayName": { "zh": "旁白" },
+        "isDefault": true
+      }
+    }
+  },
+  "imageParams": {
+    "provider": "openai",
+    "model": "gemini-3.1-flash-image",
+    "style": "Cinematic photography, ultra realistic, 8K quality, dramatic lighting, professional travel documentary style"
+  },
+  "audioParams": {
+    "padding": 0.3,
+    "introPadding": 0.5,
+    "closingPadding": 0.5
+  },
+  "movieParams": {
+    "transition": {
+      "type": "fade",
+      "duration": 0.3
+    }
+  },
+  "beats": [
+    {
+      "id": "opening",
+      "speaker": "Presenter",
+      "text": "这里，是山与海的交汇之处，是千年仙境的起点。",
+      "imagePrompt": "Yantai Mountain lighthouse at sunrise, panoramic view of the coastline, golden morning light reflecting on the sea, dramatic sky with warm colors, aerial cinematic shot"
+    },
+    {
+      "id": "nature",
+      "speaker": "Presenter",
+      "text": "黄渤海交汇，碧波万里，长岛如画。",
+      "imagePrompt": "Changdao Island in Yantai, crystal clear turquoise sea meeting deep blue ocean, seagulls flying over dramatic rocky cliffs, white waves crashing on rocks, stunning natural scenery"
+    },
+    {
+      "id": "culture",
+      "speaker": "Presenter",
+      "text": "蓬莱仙境，千年传说在此留下不朽的印记。",
+      "imagePrompt": "Penglai Pavilion shrouded in mystical sea fog and clouds, ancient Chinese architecture on clifftop overlooking the ocean, ethereal and magical atmosphere, golden hour lighting"
+    },
+    {
+      "id": "food",
+      "speaker": "Presenter",
+      "text": "烟台苹果甜如蜜，海鲜肥美，葡萄美酒醉人心。",
+      "imagePrompt": "Elegant food arrangement featuring fresh Yantai cherries, premium seafood platter with lobster and oysters, red wine glasses with vineyard in background, warm inviting lighting, vertical composition"
+    },
+    {
+      "id": "modern",
+      "speaker": "Presenter",
+      "text": "古今交融，一座充满活力的现代海滨城市。",
+      "imagePrompt": "Modern Yantai city skyline at night, illuminated skyscrapers reflecting on the sea, Binhai Square with colorful lights, vibrant coastal metropolis, long exposure photography"
+    },
+    {
+      "id": "ending",
+      "speaker": "Presenter",
+      "text": "仙境海岸，鲜美烟台，欢迎你来。",
+      "imagePrompt": "Breathtaking aerial view of Yantai coastline at golden sunset, the entire city bathed in warm golden light, sea sparkling like gold, majestic and inviting, cinematic wide angle"
+    }
+  ]
+}

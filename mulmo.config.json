@@ -9,9 +9,6 @@
         "bgmVolume": 0
     },
     "override": {
-        "imageParams": {
-            "provider": "google"
-        },
         "speechParams": {
             "provider": "volcengine",
             "speakers": {
